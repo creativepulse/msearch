@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Multi Search</name>
+    <author>Creative Pulse</author>
+    <creationDate>November 2013</creationDate>
+    <copyright>(C)2010-2013 Creative Pulse. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>joomla.support@creativepulse.gr</authorEmail>
+    <authorUrl>www.creativepulse.gr</authorUrl>
+    <version>1.2</version>
+    <description>Search module using multiple methods for searching</description>
+    
+    <files>
+        <filename module="mod_msearch">mod_msearch.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>js</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">en-GB.mod_msearch.ini</language>
+        <language tag="el-GR">el-GR.mod_msearch.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field name="search_options" type="textarea" format="raw" default="joomla - Website" label="Options" arows="7" acols="40" description="Search options. Each line must have one option. After the code name of an option you can write an asterisk (*) if you want it to be enabled by default. You may also write a dash (-) and then a title of your choice. Available options: joomla, virtuemart, google, googlesite, yahoo, yahoosite, bing, bingsite" />
+
+                <field name="layout" type="list" default="default" label="Layout" description="The layout viewer mechanism for the module. The layouts Custom1-5 are placeholders for custom made layouts through the template.">
+                    <option value="default">Default</option>
+                    <option value="custom1">Custom 1</option>
+                    <option value="custom2">Custom 2</option>
+                    <option value="custom3">Custom 3</option>
+                    <option value="custom4">Custom 4</option>
+                    <option value="custom5">Custom 5</option>
+                </field>
+
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

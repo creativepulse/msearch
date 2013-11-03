@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Multi Search</name>
+	<author>Creative Pulse</author>
+	<creationDate>January 2011</creationDate>
+	<copyright>(C)2010-2011 Creative Pulse. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomla.support@creativepulse.eu</authorEmail>
+	<authorUrl>www.creativepulse.eu</authorUrl>
+	<version>1.2</version>
+	<description>Search module using multiple methods for searching</description>
+	
+	<files>
+		<filename module="mod_msearch">mod_msearch.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>js/msearch.js</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_msearch.ini</language>
+		<language tag="el-GR">el-GR.mod_msearch.ini</language>
+	</languages>
+
+	<params>
+
+		<param name="search_options" type="textarea" default="joomla - Website" label="Options" rows="7" cols="40" description="Search options. Each line must have one option. After the code name of an option you can write an asterisk (*) if you want it to be enabled by default. You may also write a dash (-) and then a title of your choice. Available options: joomla, virtuemart, google, googlesite, yahoo, yahoosite, bing, bingsite" />
+
+		<param name="layout" type="list" default="default" label="Layout" description="The layout viewer mechanism for the module. The layouts Custom1-5 are placeholders for custom made layouts through the template.">
+			<option value="default">Default</option>
+			<option value="custom1">Custom 1</option>
+			<option value="custom2">Custom 2</option>
+			<option value="custom3">Custom 3</option>
+			<option value="custom4">Custom 4</option>
+			<option value="custom5">Custom 5</option>
+		</param>
+
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+	</params>
+	
+	<params group="advanced">
+
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+
+	</params>
+
+</install>
